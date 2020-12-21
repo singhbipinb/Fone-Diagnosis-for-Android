@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.kashisol.fonediagnosis">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_NUMBERS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="com.google.android.things.permission.MANAGE_BLUETOOTH" />
+    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+    <uses-permission
+        android:name="android.permission.READ_PRIVILEGED_PHONE_STATE"
+        tools:ignore="ProtectedPermissions" />
+
+    <uses-feature android:name="android.hardware.camera.any" />
+    <uses-feature
+        android:name="android.hardware.fingerprint"
+        android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.kashisol.fonediagnosis.multitouch"></activity>
+        <activity android:name="com.kashisol.fonediagnosis.audiojack" />
+        <activity android:name="com.kashisol.fonediagnosis.microphone" />
+        <activity android:name="com.kashisol.fonediagnosis.speaker" />
+        <activity android:name="com.kashisol.fonediagnosis.bluetooth" />
+        <activity android:name="com.kashisol.fonediagnosis.flashlight" />
+        <activity android:name="com.kashisol.fonediagnosis.wifistatus" />
+        <activity android:name="com.kashisol.fonediagnosis.frontcam" />
+        <activity
+            android:name="com.kashisol.fonediagnosis.mobilenetwork"
+            android:label="@string/title_activity_mobilenetwork"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name="com.kashisol.fonediagnosis.storage" />
+        <activity android:name="com.kashisol.fonediagnosis.ram" />
+        <activity android:name="com.kashisol.fonediagnosis.location" />
+        <activity android:name="com.kashisol.fonediagnosis.accelerometer" />
+        <activity android:name="com.kashisol.fonediagnosis.fingerprint" />
+        <activity android:name="com.kashisol.fonediagnosis.gravity" />
+        <activity android:name="com.kashisol.fonediagnosis.gyroscopesensor" />
+        <activity android:name="com.kashisol.fonediagnosis.orientation" />
+        <activity android:name="com.kashisol.fonediagnosis.magneticsensor" />
+        <activity android:name="com.kashisol.fonediagnosis.proximitysensor" />
+        <activity android:name="com.kashisol.fonediagnosis.stepcountsensor" />
+        <activity android:name="com.kashisol.fonediagnosis.stepdetectsensor" />
+        <activity android:name="com.kashisol.fonediagnosis.vibration" />
+        <activity android:name="com.kashisol.fonediagnosis.rotationsensor" />
+        <activity android:name="com.kashisol.fonediagnosis.lightsensor" />
+        <activity android:name="com.kashisol.fonediagnosis.cpu" />
+        <activity android:name="com.kashisol.fonediagnosis.hardware" />
+        <activity android:name="com.kashisol.fonediagnosis.phoneinfo" />
+        <activity android:name="com.kashisol.fonediagnosis.rearcam" />
+        <activity android:name="com.kashisol.fonediagnosis.charging" />
+        <activity android:name="com.kashisol.fonediagnosis.battery" />
+        <activity android:name="com.kashisol.fonediagnosis.test" />
+        <activity android:name="com.kashisol.fonediagnosis.home" />
+        <activity android:name="com.kashisol.fonediagnosis.Memory" />
+        <activity android:name="com.kashisol.fonediagnosis.Network" />
+        <activity android:name="com.kashisol.fonediagnosis.Audio" />
+        <activity android:name="com.kashisol.fonediagnosis.Display" />
+        <activity android:name="com.kashisol.fonediagnosis.Sensors" />
+        <activity android:name="com.kashisol.fonediagnosis.Camera" />
+        <activity android:name="com.kashisol.fonediagnosis.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+    </application>
+
+</manifest>

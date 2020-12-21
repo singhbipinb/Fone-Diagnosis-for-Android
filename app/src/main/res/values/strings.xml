@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Fone Diagnosis</string>
+    <string name="title_activity_mobilenetwork">mobilenetwork</string>
+    <string name="tab_text_1">Sim 1</string>
+    <string name="tab_text_2">Sim 2</string>
+    <string name="auth">Authenticate with fingerprint</string>
+    <string name="instructions">Place your fingertip on the Home button to verify your identity</string>
+    <string name="num_touches">Touches detected: %s</string>
+</resources>
